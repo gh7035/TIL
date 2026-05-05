@@ -70,3 +70,11 @@ fun main() {
 
 }
 ```
+
+## 스코프 함수란?
+
+목적: 특정 객체에 대한 일시적인 범위를 만들어 가독성을 향상시키고, 체이닝 호출을 쉽게 만듭니다.
+
+참조 방식 (Context Object):\
+this (Receiver): apply, run, with (객체 멤버에 직접 접근, 생략 가능)\
+it (Argument): let, also (다른 이름으로 변경 가능, 기본값 it)
