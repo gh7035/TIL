@@ -36,7 +36,7 @@ Spring Data JPA의 `saveAndFlush()` = `save()` + `flush()`. 저장 후 바로 SQ
 try {
     memberRepository.saveAndFlush(member);
 } catch (DataIntegrityViolationException e) {
-    throw new BusinessException(ErrorCode.CUSTOME_ERROR);
+    throw new BusinessException(ErrorCode.CUSTOM_ERROR);
 }
 ```
 
@@ -48,8 +48,9 @@ try {
 
 
 ### 부연설명을 좀 하자면 
+"이미 영속 상태인 엔티티는 save()가 필요 없다."
 
-1. findById()로 꺼낸 엔티티(= 이미 영속 상태)는 이미 JPA가 지켜보고 있는 상태여서 값을 바꾸기만 하면 커밋할 때 JPA가 알아서 UPDATE를 보내니까 save()를 또 부를 필요가 없다!
+findById()로 꺼낸 엔티티(= 이미 영속 상태)는 이미 JPA가 지켜보고 있는 상태여서 값을 바꾸기만 하면 커밋할 때 JPA가 알아서 UPDATE를 보내니까 save()를 또 부를 필요가 없다!
 
 
 ```java
