@@ -26,7 +26,7 @@ JPA의 영속성 컨텍스트가 엔티티가 처음 들어올때(조회, 저장
 
  ## SaveAndFlush()를 쓰는 경우
 
-Spring Data JPA의 `saveAndFlush()` = `save()` + `flush()`. 저장 후 바로 SQL을 DB로 보낸다.
+Spring Data JPA의 `saveAndFlush()` = `saveㄴㄴ()` + `flush()`. 저장 후 바로 SQL을 DB로 보낸다.
 
 **쓰는 경우**
 - DB 제약 조건 위반(유니크 키 등)을 그 자리에서 잡아 커스텀 예외로 바꿔야 할 때
